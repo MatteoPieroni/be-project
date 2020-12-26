@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "nyc --reporter=html --reporter=text --reporter=lcov mocha 'src/**/*test.js' --recursive -r @babel/register",
+		"coverage": "nyc report --reporter=text-lcov",
 		"prestart": "babel ./src --out-dir build",
 		"start": "node ./build/bin/www",
 		"dev": "nodemon --exec babel-node ./src/bin/www",
